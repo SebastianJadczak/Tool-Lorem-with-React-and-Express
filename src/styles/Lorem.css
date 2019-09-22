@@ -29,6 +29,7 @@ div.loremLeftMain h2 {
 
 div.loremLeftMain p {
     letter-spacing: 1px;
+    font-size: 18px;
 }
 
 div.articleInfoFirst {
@@ -45,6 +46,7 @@ div.articleInfoFirst div.title {
 
 div.articleInfoFirst div.text {
     color: white;
+    font-size: 17px;
 }
 
 
@@ -62,6 +64,7 @@ div.articleInfoSecond div.title {
 
 div.articleInfoSecond div.text {
     color: white;
+    font-size: 17px;
 }
 
 div.usefulLinks {
@@ -101,4 +104,64 @@ div.usefulLinks div.links ul li a {
     color: rgb(233, 255, 220);
     letter-spacing: 1px;
     text-decoration: none;
+    font-size: 17px;
+}
+
+article.artLoremRight {
+    margin-top: 70px;
+    margin-left: 25px;
+}
+
+
+article.artLoremRight div.imgNews {
+    width: 150px;
+    height: 100px;
+}
+
+article.artLoremRight:nth-last-of-type(1) {
+    margin: 80px 0 80px 25px;
+}
+
+article.artLoremRight div.imgNews img {
+    width: 100%;
+    height: 100%;
+}
+
+article.artLoremRight div.article {
+    display: flex;
+    flex-direction: row;
+}
+
+article.artLoremRight h3.titleArticle {
+    text-align: left;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    color: rgb(156, 233, 156);
+    letter-spacing: 2px;
+    font-size: 22px;
+}
+
+article.artLoremRight div.article p {
+    color: white;
+    letter-spacing: 1px;
+    line-height: 24px;
+    padding-left: 20px;
+    font-size: 18px;
+    width: 70%;
+}
+
+article.artLoremRight div.buttonMore {
+    text-align: right;
+    margin-right: 80px;
+    margin-top: 10px;
+}
+
+article.artLoremRight div.buttonMore button {
+    border: 2px solid rgb(156, 233, 156);
+    box-shadow: 1px 0 2px rgb(156, 233, 156);
+    background-color: #006600;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-size: 17px;
 }
