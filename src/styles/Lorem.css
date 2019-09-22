@@ -1,0 +1,104 @@
+div.lorem {
+    display: flex;
+    flex-direction: row;
+}
+
+div.lorem div.loremLeft {
+    width: 35vw;
+    min-height: 75vh;
+    margin-left: 4vw;
+}
+
+div.lorem div.loremRight {
+    border-left: 2px solid rgb(156, 233, 156);
+    width: 55vw;
+    min-height: 75vh;
+    margin-left: 2vw;
+}
+
+div.loremLeftMain {
+    padding-top: 35px;
+    text-align: left;
+    color: white;
+}
+
+div.loremLeftMain h2 {
+    color: rgb(156, 233, 156);
+    margin-bottom: 20px;
+}
+
+div.loremLeftMain p {
+    letter-spacing: 1px;
+}
+
+div.articleInfoFirst {
+    margin-top: 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+div.articleInfoFirst div.title {
+    color: rgb(156, 233, 156);
+    margin-right: 50px;
+}
+
+div.articleInfoFirst div.text {
+    color: white;
+}
+
+
+div.articleInfoSecond {
+    margin-top: 35px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+div.articleInfoSecond div.title {
+    color: rgb(156, 233, 156);
+    margin-right: 50px;
+}
+
+div.articleInfoSecond div.text {
+    color: white;
+}
+
+div.usefulLinks {
+    display: flex;
+    flex-direction: row;
+    margin-top: 55px;
+}
+
+div.usefulLinks div.qa {
+    width: 130px;
+    height: 100px;
+}
+
+div.usefulLinks div.qa img {
+    width: 100%;
+    height: 100%;
+    border: 4px solid #116511;
+}
+
+div.usefulLinks div.links {
+    padding-left: 60px;
+    text-align: left;
+    width: 100%;
+    color: rgb(156, 233, 156);
+}
+
+div.usefulLinks div.links ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+div.usefulLinks div.links ul li {
+    line-height: 26px;
+}
+
+div.usefulLinks div.links ul li a {
+    color: rgb(233, 255, 220);
+    letter-spacing: 1px;
+    text-decoration: none;
+}

@@ -5,7 +5,7 @@
 
 header {
   background-color: #282c34;
-  min-height: 15vh;
+  min-height: 18vh;
   padding-top: 10px;
 }
 
@@ -13,10 +13,12 @@ header div.header {
   width: 95vw;
   margin: 0 auto;
   background-color: #3cbd3c;
-  min-height: 15vh;
+  min-height: 17vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: 1px 1px 3px rgb(156, 233, 156);
+  border-radius: 8px;
 }
 
 header div.header div.text {
@@ -44,14 +46,13 @@ header div.header div.logo img {
 
 nav {
   background-color: #282c34;
-  height: 100px;
+  height: 67px;
 }
 
 nav div.nav {
   margin: 0 auto;
   width: 95vw;
   border-bottom: 2px solid rgb(156, 233, 156);
-
 }
 
 nav div.nav ul {
@@ -61,10 +62,11 @@ nav div.nav ul {
 
 nav div.nav ul li {
   width: 20%;
-  margin: 5px 2px 5px 2px;
-  height: 36px;
+  margin: 7px 4px 12px 4px;
+  height: 45px;
   flex-direction: column;
-  line-height: 36px;
+  line-height: 45px;
+  box-shadow: 1px 0 3px rgb(156, 233, 156);
 }
 
 nav div.nav ul li a {
