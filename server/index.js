@@ -13,9 +13,7 @@ app.listen(3001, () =>
     console.log('Express server is running on localhost:3001')
 );
 
-
-
-
+// Start Ipsum Pages
 
 app.get('/ipsumTaskList', (req, res) => {
     const data = fs.readFileSync('./src/database/database.json')
@@ -45,3 +43,5 @@ app.post(`/addTask/:input`, (req, res) => {
         data: "Dodano zadanie"
     })
 })
+
+// End Ipsum Pages
