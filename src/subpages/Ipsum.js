@@ -66,11 +66,11 @@ class Ipsum extends Component {
 
     render() {
         return (
-            <>
-                {this.state.answer ? this.state.answer : null}
+            <div className="Ipsum">
+                {this.state.answer ? <p className="addedTask">{this.state.answer}</p> : null}
                 <AddTask handleChange={this.handleChange} addTask={this.addTask} value={this.state.input} />
                 <TaskList zz={this.state.zz} />
-            </>
+            </div>
         )
     }
 }
