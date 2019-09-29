@@ -8,7 +8,8 @@ class Ipsum extends Component {
         input: "",
         answer: "",
         zz: [],
-        title: ""
+        title: "",
+        if: false
     }
 
 
@@ -16,6 +17,7 @@ class Ipsum extends Component {
         this.setState({
             input: e.target.value
         })
+
     }
     addTask = () => {
 
@@ -26,14 +28,10 @@ class Ipsum extends Component {
             .then(r => r.json())
             .then(data => {
                 this.setState({
-                   
                     answer: data.data,
-                    input: "",
+                    if: true,
                 })
             })
-
-
-
     }
 
     componentDidMount() {
@@ -42,19 +40,35 @@ class Ipsum extends Component {
         })
             .then(r => r.json())
             .then(data => {
-                // this.addNew(data)
+
                 this.setState({
                     zz: data.data
                 })
             })
-
-
     }
+    componentDidUpdate() {
+        if (this.state.if) {
+            fetch('/ipsumTaskList', {
+                method: 'GET'
+            })
+                .then(r => r.json())
+                .then(data => {
+
+                    this.setState({
+                        input: "",
+                        zz: data.data,
+                        if: false,
+                    })
+                })
+        }
+    }
+
+
     render() {
         return (
             <>
                 {this.state.answer ? this.state.answer : null}
-                <AddTask handleChange={this.handleChange} addTask={this.addTask} />
+                <AddTask handleChange={this.handleChange} addTask={this.addTask} value={this.state.input} />
                 <TaskList zz={this.state.zz} />
             </>
         )

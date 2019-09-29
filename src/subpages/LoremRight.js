@@ -11,7 +11,7 @@ const articles = [
 const LoremRight = () => {
 
     const art = articles.map(item => (
-        <article className="artLoremRight" kew={item.id}>
+        <article className="artLoremRight" key={item.id}>
             <h3 className="titleArticle">{item.title}</h3>
             <div className="article">
                 <div className="imgNews">
