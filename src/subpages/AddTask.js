@@ -1,11 +1,13 @@
 import React from 'react';
 
-const AddTask = () => {
+const AddTask = (props) => {
+
     return (
         <div className="addTask">
-            <input type="text" placeholder="Wpisz zadanie" />
-            <button className="addTask">Dodaj zadanie</button>
+            <input type="text" placeholder="Wpisz zadanie" onChange={props.handleChange} />
+            <button className="addTask" onClick={props.addTask}>Dodaj zadanie</button>
         </div>
     )
 }
+
 export default AddTask

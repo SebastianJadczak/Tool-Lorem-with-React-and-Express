@@ -14,10 +14,29 @@ app.listen(3001, () =>
 );
 
 
+
+
+
 app.get('/ipsumTaskList', (req, res) => {
     const data = fs.readFileSync('./src/database/database.json')
     const newData = JSON.parse(data)
     res.json({
         data: newData
     })
+})
+
+app.post(`/addTask/:input`, (req, res) => {
+    const data = fs.readFileSync('./src/database/database.json')
+    const newData = JSON.parse(data)
+
+    const {
+        input
+    } = req.params;
+    newData.push({
+        id: newData.length + 1,
+        content: input
+    })
+    const dataJSON = JSON.stringify(newData)
+    console.log(dataJSON)
+    fs.writeFileSync('./src/database/database.json', dataJSON)
 })
