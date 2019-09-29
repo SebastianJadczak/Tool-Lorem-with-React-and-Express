@@ -1,0 +1,71 @@
+div.Dolor {
+    display: flex;
+    min-height: 80vh;
+    width: 100%;
+}
+
+div.Dolor ul {
+    list-style: none;
+}
+
+div.Dolor div.toDo {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 30%;
+    height: 70vh;
+    border: 2px solid rgb(156, 233, 156);
+    box-shadow: 1px 0 2px rgb(156, 233, 156);
+    background-color: #0066006b;
+    color: white;
+}
+
+
+div.Dolor div.inProgress {
+    margin-left: 10px;
+    margin-top: 50px;
+    width: 30%;
+    height: 70vh;
+    border: 2px solid rgb(156, 233, 156);
+    box-shadow: 1px 0 2px rgb(156, 233, 156);
+    background-color: #0066006b;
+    color: white;
+}
+
+div.Dolor div.done {
+    margin-left: 10px;
+    margin-top: 50px;
+    width: 30%;
+    height: 70vh;
+    border: 2px solid rgb(156, 233, 156);
+    box-shadow: 1px 0 2px rgb(156, 233, 156);
+    background-color: #0066006b;
+    color: white;
+}
+
+div.Dolor h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(159, 226, 159);
+    padding-top: 10px;
+}
+
+div.element {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 80%;
+    border: 2px solid rgb(156, 233, 156);
+    box-shadow: 1px 0 2px rgb(156, 233, 156);
+    background-color: #0066006b;
+    color: white;
+    cursor: pointer;
+}
+
+div.element p.elementTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+div.element p.content {
+    margin-bottom: 5px;
+}

@@ -13,7 +13,7 @@ app.listen(3001, () =>
     console.log('Express server is running on localhost:3001')
 );
 
-// Start Ipsum Pages
+// Start Ipsum Page
 
 app.get('/ipsumTaskList', (req, res) => {
     const data = fs.readFileSync('./src/database/database.json')
@@ -33,7 +33,8 @@ app.post(`/addTask/:input`, (req, res) => {
     } = req.params;
     newData.push({
         id: newData.length + 1,
-        content: input
+        content: input,
+        status: "toDo"
     })
     const dataJSON = JSON.stringify(newData)
 
@@ -44,4 +45,13 @@ app.post(`/addTask/:input`, (req, res) => {
     })
 })
 
-// End Ipsum Pages
+// End Ipsum Page
+app.get('/DolorCanban', (req, res) => {
+    const data = fs.readFileSync('./src/database/database.json')
+    const newData = JSON.parse(data)
+    res.json({
+        data: newData
+    })
+})
+
+//Start Dolor Page

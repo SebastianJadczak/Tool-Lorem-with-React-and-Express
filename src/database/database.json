@@ -1,4 +1,1 @@
-[{
-    "id": 1,
-    "content": "Pierwsze zadanie"
-}]
+[{"id":1,"content":"Pierwsze zadanie","status":"toDo"},{"id":2,"content":"Drugie zadanie","status":"toDo"},{"id":3,"content":"Trzecie zadanie","status":"toDo"}]
