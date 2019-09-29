@@ -39,4 +39,8 @@ app.post(`/addTask/:input`, (req, res) => {
     const dataJSON = JSON.stringify(newData)
     console.log(dataJSON)
     fs.writeFileSync('./src/database/database.json', dataJSON)
+
+    res.json({
+        data: "Dodano zadanie"
+    })
 })

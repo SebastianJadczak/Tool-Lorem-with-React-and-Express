@@ -6,6 +6,7 @@ import '../styles/Ipsum.css'
 class Ipsum extends Component {
     state = {
         input: "",
+        answer: "",
         zz: [],
         title: ""
     }
@@ -17,12 +18,22 @@ class Ipsum extends Component {
         })
     }
     addTask = () => {
+
         fetch(`/addTask/${this.state.input}`, {
             method: 'POST'
         })
-        this.setState({
-            input: ""
-        })
+
+            .then(r => r.json())
+            .then(data => {
+                this.setState({
+                   
+                    answer: data.data,
+                    input: "",
+                })
+            })
+
+
+
     }
 
     componentDidMount() {
@@ -36,10 +47,13 @@ class Ipsum extends Component {
                     zz: data.data
                 })
             })
+
+
     }
     render() {
         return (
             <>
+                {this.state.answer ? this.state.answer : null}
                 <AddTask handleChange={this.handleChange} addTask={this.addTask} />
                 <TaskList zz={this.state.zz} />
             </>
