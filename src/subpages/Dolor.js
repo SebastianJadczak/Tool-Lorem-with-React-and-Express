@@ -22,12 +22,20 @@ class Dolor extends Component {
             })
     }
 
+    handleDrag = (event) => {
+        event.dataTransfer.setData("Text", event.target.id)
+        event.target.style.opacity = "0.4"
+    }
+    handleDragend = (event) => {
+        event.target.style.border = "3px dotted red";
+    }
+
     render() {
 
         return (
             <div className="Dolor">
-                <div className="toDo">
-                    <ToDo list={this.state.zz} />
+                <div className="toDo" >
+                    <ToDo list={this.state.zz} handleDrag={this.handleDrag} />
                 </div>
                 <div className="inProgress">
                     <InProgress list={this.state.zz} />

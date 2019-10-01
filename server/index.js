@@ -55,3 +55,25 @@ app.get('/DolorCanban', (req, res) => {
 })
 
 //Start Dolor Page
+
+//End Dolor Page
+
+//Start SitAmet Page
+
+// app.get('/ipsumTaskList', (req, res) => {
+//     const data = fs.readFileSync('./src/database/database.json')
+//     const newData = JSON.parse(data)
+//     res.json({
+//         data: newData
+//     })
+// })
+
+
+app.get('/SitAmetProducts', (req, res) => {
+    const products = JSON.parse(fs.readFileSync('./src/database/product.json'))
+    res.json({
+        prod: products
+    })
+})
+
+//End SitAmet Page

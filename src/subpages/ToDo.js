@@ -6,7 +6,7 @@ const ToDo = (props) => {
     const toDo = props.list.filter(task => task.status === "toDo");
 
     const toDoList = toDo.map(item =>
-        <li key={item.id}> <Element content={item.content} /></li>
+        <li key={item.id}> <Element content={item.content} handleDrag={props.handleDrag} /></li>
     )
 
     return (
