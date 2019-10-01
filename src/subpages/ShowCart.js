@@ -1,13 +1,18 @@
 import React from 'react'
 import '../styles/ShowCart.css'
+import ProductMini from './ProductMini'
 
 const ShowCart = (props) => {
-
+    const { MyCart, handleCart } = props
+    console.log(MyCart)
+    const listMyProductsInMyCart = MyCart.map(item => (
+        <li key={MyCart.length++}><ProductMini name={item.productName} description={item.productDescription} price={item.productPrice} /> </li>
+    ))
     return (
         <div className="showCart">
-            <div className="closeShowCart" onClick={props.handleCart}><span>X</span></div>
+            <div className="closeShowCart" onClick={handleCart}><span>X</span></div>
             <div className="cartDetail">
-
+                <ul>{listMyProductsInMyCart}</ul>
             </div>
         </div>
     )
