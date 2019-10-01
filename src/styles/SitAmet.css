@@ -81,3 +81,9 @@ div.products ul li div.product div.price button {
     background-color: #0c520c;
     color: rgb(221, 221, 221);
 }
+
+p.addedProduct {
+    color: white;
+    padding-top: 20px;
+    font-weight: bold;
+}

@@ -6,7 +6,8 @@ import Product from './Product'
 class SitAmet extends Component {
 
     state = {
-        products: []
+        products: [],
+        text: "",
     }
 
 
@@ -22,15 +23,30 @@ class SitAmet extends Component {
             })
     }
 
+    addProductToCart = (id) => {
+        fetch(`/addProductToCart/${id}`, {
+            method: 'POST'
+        })
+            .then(r => r.json())
+            .then(data => {
+                this.setState({
+                    text: data.data
+                })
+
+            })
+
+    }
+
+
     render() {
-        console.log(this.state.products)
 
         const listProduct = this.state.products.map(item => (
-            <li key={item.id}><Product nr={item.id} name={item.name} description={item.description} price={item.price} /></li>
+            <li key={item.id}><Product nr={item.id} name={item.name} description={item.description} price={item.price} addProductToCart={this.addProductToCart} /></li>
         ))
         return (
             <div className="SitAmet">
                 <div className="title"><h3>Sit Amet, Welcome!</h3></div>
+                {this.state.text ? <p className="addedProduct">{this.state.text}</p> : null}
                 <div className="products">
                     <ul className="productsList">{listProduct}</ul>
                 </div>

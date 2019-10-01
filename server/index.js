@@ -60,20 +60,22 @@ app.get('/DolorCanban', (req, res) => {
 
 //Start SitAmet Page
 
-// app.get('/ipsumTaskList', (req, res) => {
-//     const data = fs.readFileSync('./src/database/database.json')
-//     const newData = JSON.parse(data)
-//     res.json({
-//         data: newData
-//     })
-// })
-
-
 app.get('/SitAmetProducts', (req, res) => {
     const products = JSON.parse(fs.readFileSync('./src/database/product.json'))
     res.json({
         prod: products
     })
+})
+
+
+app.post(`/addProductToCart/:id`, (req, res) => {
+    const {
+        id
+    } = req.params;
+    res.json({
+        data: "Produkt dodano!"
+    })
+
 })
 
 //End SitAmet Page
