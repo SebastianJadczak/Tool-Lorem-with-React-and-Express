@@ -1,0 +1,41 @@
+div.showCart {
+    position: absolute;
+    width: 100%;
+    height: 233vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.39);
+}
+
+div.showCart div.cartDetail {
+    position: relative;
+    top: 100px;
+    left: 200px;
+    width: 70vw;
+    height: 70vh;
+    border: 2px solid #006600;
+    box-shadow: 1px 0 1px #006600;
+    background-color: #e9e6e6;
+    color: white;
+}
+
+div.showCart div.closeShowCart {
+    position: absolute;
+    top: 87px;
+    left: 83.3vw;
+    width: 27px;
+    height: 27px;
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 1px 0 1px #006600;
+    background-color: #006600;
+    color: #e9e6e6;
+    z-index: 1;
+}
+
+div.showCart div.closeShowCart span {
+    font-weight: bold;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}

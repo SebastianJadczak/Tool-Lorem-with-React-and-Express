@@ -9,7 +9,7 @@ const Cart = (props) => {
     return (
         <>
             <img src={CartImg} alt="koszyk" className="cart" />
-            <div className="amountProducts"><span>{props.amountProducts} </span> </div>
+            <div className="amountProducts"><span>{props.amountProducts ? props.amountProducts : "0"} </span> </div>
         </>
     )
 }

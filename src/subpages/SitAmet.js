@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/SitAmet.css'
 import Product from './Product'
 import Cart from './Cart'
-
+import ShowCart from './ShowCart'
 
 class SitAmet extends Component {
 
@@ -40,10 +40,10 @@ class SitAmet extends Component {
             })
 
     }
-    showCart = () => {
-        this.setState({
-
-        })
+    handleCart = () => {
+        this.setState(prevState => ({
+            showCart: !prevState.showCart
+        }))
     }
 
 
@@ -55,11 +55,12 @@ class SitAmet extends Component {
         return (
             <div className="SitAmet">
                 <div className="title"><h3>Sit Amet, Welcome!</h3></div>
-                <div className="cart" onClick={this.showCart}><Cart amountProducts={this.state.amountProducts} /></div>
+                <div className="cart" onClick={this.handleCart}><Cart amountProducts={this.state.amountProducts} /></div>
                 {this.state.text ? <p className="addedProduct">{this.state.text}</p> : null}
                 <div className="products">
                     <ul className="productsList">{listProduct}</ul>
                 </div>
+                {this.state.showCart ? <ShowCart handleCart={this.handleCart} /> : null}
             </div>
         )
     }
