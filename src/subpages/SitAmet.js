@@ -23,10 +23,10 @@ class SitAmet extends Component {
     }
 
     render() {
-        // console.log(this.state.products)
+        console.log(this.state.products)
 
         const listProduct = this.state.products.map(item => (
-            <li key={item.id}><Product nr={item.id} name={item.name} description={item.description} price={item.description} /></li>
+            <li key={item.id}><Product nr={item.id} name={item.name} description={item.description} price={item.price} /></li>
         ))
         return (
             <div className="SitAmet">
