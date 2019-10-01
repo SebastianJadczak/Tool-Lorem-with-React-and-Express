@@ -8,7 +8,7 @@ const Product = (props) => {
             <h3>{props.name}</h3>
             <div className="image"></div>
             <p className="description"> {props.description}</p>
-            <div className="price"><span>{props.price} </span><button onClick={() => props.addProductToCart(props.nr)}>Dodaj!</button></div>
+            <div className="price"><span>{props.price} </span><button onClick={() => props.addProductToCart(props.nr, props.name, props.description, props.price)}>Dodaj!</button></div>
         </div>
     )
 }

@@ -70,20 +70,29 @@ app.get('/SitAmetProducts', (req, res) => {
 
 
 let cart = []
-
-app.post(`/addProductToCart/:id`, (req, res) => {
+// ${name}/${description}/${price}`
+app.post(`/addProductToCart/:id/:name/:description/:price`, (req, res) => {
     const {
-        id
+        id,
+        name,
+        description,
+        price
     } = req.params;
     ///////////////////
     cart.push({
-        product: id
+        productId: id,
+        productName: name,
+        productDescription: description,
+        productPrice: price
     })
-    //add product to cart
-    //////////////// 
+
+
+    // look products with this number id
+    ///////////////////
     res.json({
         data: "Produkt dodano!",
-        cartLength: cart.length
+        cartLength: cart.length,
+        MyCart: cart
     })
 
 })

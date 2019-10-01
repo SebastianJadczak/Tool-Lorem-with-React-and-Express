@@ -10,7 +10,8 @@ class SitAmet extends Component {
         products: [],
         text: "",
         amountProducts: null,
-        showCart: false
+        showCart: false,
+        MyCart: []
     }
 
 
@@ -26,15 +27,16 @@ class SitAmet extends Component {
             })
     }
 
-    addProductToCart = (id) => {
-        fetch(`/addProductToCart/${id}`, {
+    addProductToCart = (id, name, description, price) => {
+        fetch(`/addProductToCart/${id}/${name}/${description}/${price}`, {
             method: 'POST'
         })
             .then(r => r.json())
             .then(data => {
                 this.setState({
                     text: data.data,
-                    amountProducts: data.cartLength
+                    amountProducts: data.cartLength,
+                    MyCart: data.MyCart
                 })
 
             })
@@ -44,11 +46,11 @@ class SitAmet extends Component {
         this.setState(prevState => ({
             showCart: !prevState.showCart
         }))
+
     }
 
 
     render() {
-
         const listProduct = this.state.products.map(item => (
             <li key={item.id}><Product nr={item.id} name={item.name} description={item.description} price={item.price} addProductToCart={this.addProductToCart} /></li>
         ))
