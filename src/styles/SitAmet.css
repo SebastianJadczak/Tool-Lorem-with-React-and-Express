@@ -83,7 +83,45 @@ div.products ul li div.product div.price button {
 }
 
 p.addedProduct {
+    position: absolute;
+    left: 630px;
     color: white;
     padding-top: 20px;
     font-weight: bold;
+}
+
+div.cart {
+    position: absolute;
+    top: 280px;
+    right: 80px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(136, 255, 165);
+    box-shadow: 1px 0 2px rgb(156, 233, 156);
+    background-color: #289428;
+    cursor: pointer;
+}
+
+div.cart img.cart {
+    width: 85%;
+    height: 85%;
+
+}
+
+div.amountProducts {
+    position: relative;
+    top: -13px;
+    right: 17px;
+    width: 27px;
+    height: 27px;
+    font-weight: bold;
+    border: 2px solid black;
+    box-shadow: 1px 0 2px rgb(60, 61, 60);
+    background-color: #c9c9c9;
+    border-radius: 25px;
+}
+
+div.amountProducts span {
+    position: relative;
+    top: 3px;
 }

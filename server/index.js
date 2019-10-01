@@ -68,12 +68,22 @@ app.get('/SitAmetProducts', (req, res) => {
 })
 
 
+
+let cart = []
+
 app.post(`/addProductToCart/:id`, (req, res) => {
     const {
         id
     } = req.params;
+    ///////////////////
+    cart.push({
+        product: id
+    })
+    //add product to cart
+    //////////////// 
     res.json({
-        data: "Produkt dodano!"
+        data: "Produkt dodano!",
+        cartLength: cart.length
     })
 
 })

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/SitAmet.css'
 import Product from './Product'
+import Cart from './Cart'
 
 
 class SitAmet extends Component {
@@ -8,6 +9,8 @@ class SitAmet extends Component {
     state = {
         products: [],
         text: "",
+        amountProducts: null,
+        showCart: false
     }
 
 
@@ -30,11 +33,17 @@ class SitAmet extends Component {
             .then(r => r.json())
             .then(data => {
                 this.setState({
-                    text: data.data
+                    text: data.data,
+                    amountProducts: data.cartLength
                 })
 
             })
 
+    }
+    showCart = () => {
+        this.setState({
+
+        })
     }
 
 
@@ -46,6 +55,7 @@ class SitAmet extends Component {
         return (
             <div className="SitAmet">
                 <div className="title"><h3>Sit Amet, Welcome!</h3></div>
+                <div className="cart" onClick={this.showCart}><Cart amountProducts={this.state.amountProducts} /></div>
                 {this.state.text ? <p className="addedProduct">{this.state.text}</p> : null}
                 <div className="products">
                     <ul className="productsList">{listProduct}</ul>
