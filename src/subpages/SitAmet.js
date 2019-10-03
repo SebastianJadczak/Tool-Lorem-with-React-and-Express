@@ -3,6 +3,7 @@ import '../styles/SitAmet.css'
 import Product from './Product'
 import Cart from './Cart'
 import ShowCart from './ShowCart'
+import NextStep from './NextStep'
 
 class SitAmet extends Component {
 
@@ -11,7 +12,8 @@ class SitAmet extends Component {
         text: "",
         amountProducts: null,
         showCart: false,
-        MyCart: []
+        MyCart: [],
+        nextStep: false,
     }
 
 
@@ -61,6 +63,15 @@ class SitAmet extends Component {
 
             })
     }
+    nextStep = () => {
+        if (this.state.MyCart.length !== 0) {
+            this.setState({
+                showCart: false,
+                nextStep: true,
+            })
+        }
+
+    }
 
     render() {
         const listProduct = this.state.products.map(item => (
@@ -74,7 +85,8 @@ class SitAmet extends Component {
                 <div className="products">
                     <ul className="productsList">{listProduct}</ul>
                 </div>
-                {this.state.showCart ? <ShowCart handleCart={this.handleCart} MyCart={this.state.MyCart} deleteProduct={this.deletePruductWithCart} /> : null}
+                {this.state.showCart ? <ShowCart handleCart={this.handleCart} MyCart={this.state.MyCart} deleteProduct={this.deletePruductWithCart} nextStep={this.nextStep} /> : null}
+                {this.state.nextStep ? <NextStep /> : null}
             </div>
         )
     }

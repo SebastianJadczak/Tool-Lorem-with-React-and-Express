@@ -14,6 +14,7 @@ const ShowCart = (props) => {
             <div className="cartDetail">
                 <ul>{listMyProductsInMyCart}</ul>
             </div>
+            <div className="nextStep"><button className="nextStep" onClick={props.nextStep}>Dalej</button></div>
         </div>
     )
 }
