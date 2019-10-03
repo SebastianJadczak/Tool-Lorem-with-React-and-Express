@@ -48,7 +48,19 @@ class SitAmet extends Component {
         }))
 
     }
+    deletePruductWithCart = (name) => {
+        fetch(`/deleteProductWithCart/${name}`, {
+            method: 'POST'
+        })
+            .then(r => r.json())
+            .then(data => {
+                this.setState({
+                    amountProducts: data.cartLength,
+                    MyCart: data.MyCart
+                })
 
+            })
+    }
 
     render() {
         const listProduct = this.state.products.map(item => (
@@ -62,7 +74,7 @@ class SitAmet extends Component {
                 <div className="products">
                     <ul className="productsList">{listProduct}</ul>
                 </div>
-                {this.state.showCart ? <ShowCart handleCart={this.handleCart} MyCart={this.state.MyCart} /> : null}
+                {this.state.showCart ? <ShowCart handleCart={this.handleCart} MyCart={this.state.MyCart} deleteProduct={this.deletePruductWithCart} /> : null}
             </div>
         )
     }

@@ -39,3 +39,42 @@ div.showCart div.closeShowCart span {
     top: 2px;
     cursor: pointer;
 }
+
+div.cartDetail {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+div.cartDetail ul {
+    list-style: none;
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.cartDetail ul li {
+    border: 2px solid #009700;
+    box-shadow: 1px 0 1px #01b301;
+    background-color: #006600;
+    color: white;
+    margin: 10px;
+    width: 200px;
+}
+
+div.cartDetail ul li div.productMini div.deleteProduct {
+    position: relative;
+    top: -290px;
+    right: -180px;
+    border: 2px solid #080808;
+    box-shadow: 1px 0 1px #01b301;
+    background-color: #ffffff;
+    color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+}
+
+div.cartDetail ul li div.productMini div.deleteProduct span {
+    cursor: pointer;
+}

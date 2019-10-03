@@ -6,7 +6,7 @@ const ShowCart = (props) => {
     const { MyCart, handleCart } = props
     console.log(MyCart)
     const listMyProductsInMyCart = MyCart.map(item => (
-        <li key={MyCart.length++}><ProductMini name={item.productName} description={item.productDescription} price={item.productPrice} /> </li>
+        <li key={MyCart.length++}><ProductMini name={item.productName} description={item.productDescription} price={item.productPrice} deleteProduct={props.deleteProduct} /> </li>
     ))
     return (
         <div className="showCart">

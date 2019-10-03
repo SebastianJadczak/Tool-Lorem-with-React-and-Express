@@ -96,5 +96,21 @@ app.post(`/addProductToCart/:id/:name/:description/:price`, (req, res) => {
     })
 
 })
+//delete Product with Cart
+
+app.post('/deleteProductWithCart/:name', (req, res) => {
+    const {
+        name
+    } = req.params
+
+    const numberDeleteProduct = cart.findIndex(item => item.productName === name)
+    cart.splice(numberDeleteProduct, 1)
+    res.json({
+        cartLength: cart.length,
+        MyCart: cart
+    })
+})
+
+
 
 //End SitAmet Page
