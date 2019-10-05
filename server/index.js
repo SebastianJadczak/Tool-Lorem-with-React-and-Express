@@ -120,7 +120,7 @@ app.post('/deleteProductWithCart/:name', (req, res) => {
 app.get('/getDataProfile', (req, res) => {
 
 
-    const profile = JSON.parse(fs.readFileSync('./database/profile.json'))
+    const profile = JSON.parse(fs.readFileSync('./src/database/profile.json'))
 
     res.json({
         data: profile

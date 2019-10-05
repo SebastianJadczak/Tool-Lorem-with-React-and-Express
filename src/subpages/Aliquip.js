@@ -4,14 +4,20 @@ import YourData from "./YourData";
 import MenuData from "./MenuData"
 import "../styles/Aliquip.css"
 
+
 class Aliquip extends Component {
     state = {
-        dataProfile: []
+        dataProfile: [],
+        id: null,
     }
 
-    handleShowData = () => {
+    handleShowData = (id) => {
+        this.setState({
+            id: id
+        })
 
     }
+
 
 
 
@@ -23,7 +29,7 @@ class Aliquip extends Component {
             .then(r => r.json())
             .then(data => {
                 this.setState({
-                    dataProfile: data
+                    dataProfile: data.data
                 })
             })
     }
@@ -32,7 +38,7 @@ class Aliquip extends Component {
         return (
             <div className="Aliquip">
                 <MenuData handleShowData={this.handleShowData} />
-                <YourData />
+                <YourData page={this.state.id} />
             </div>
         )
     }
