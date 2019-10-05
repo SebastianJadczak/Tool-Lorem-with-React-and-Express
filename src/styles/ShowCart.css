@@ -96,4 +96,5 @@ div.nextStep button.nextStep {
     color: white;
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }

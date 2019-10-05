@@ -65,10 +65,10 @@ class SitAmet extends Component {
     }
     nextStep = () => {
         if (this.state.MyCart.length !== 0) {
-            this.setState({
+            this.setState(prevState => ({
                 showCart: false,
-                nextStep: true,
-            })
+                nextStep: !prevState.nextStep
+            }))
         }
 
     }
@@ -86,7 +86,7 @@ class SitAmet extends Component {
                     <ul className="productsList">{listProduct}</ul>
                 </div>
                 {this.state.showCart ? <ShowCart handleCart={this.handleCart} MyCart={this.state.MyCart} deleteProduct={this.deletePruductWithCart} nextStep={this.nextStep} /> : null}
-                {this.state.nextStep ? <NextStep /> : null}
+                {this.state.nextStep ? <NextStep nextStep={this.nextStep} /> : null}
             </div>
         )
     }

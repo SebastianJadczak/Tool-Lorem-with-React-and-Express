@@ -1,0 +1,53 @@
+div.Aliquip {
+    display: flex;
+}
+
+div.Aliquip div.MenuData {
+    margin-left: 60px;
+    margin-top: 40px;
+    border: 2px solid #00d100;
+    box-shadow: 1px 0 1px #01b301;
+    background-color: #2f7e2f;
+    color: white;
+    width: 320px;
+    height: 700px;
+}
+
+
+
+div.Aliquip div.YourData {
+    border: 2px solid #00d100;
+    box-shadow: 1px 0 1px #01b301;
+    background-color: #01830171;
+    color: white;
+    width: 820px;
+    height: 700px;
+    margin-left: 120px;
+    margin-top: 40px;
+}
+
+div.Aliquip div.EditData {
+    border: 2px solid #00d100;
+    box-shadow: 1px 0 1px #01b301;
+    background-color: #01830171;
+    color: white;
+    width: 400px;
+    height: 500px;
+}
+
+div.MenuData ul {
+    list-style: none;
+    padding-top: 8px;
+}
+
+div.MenuData ul li {
+    cursor: pointer;
+    height: 65px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border: 2px solid #004400;
+    box-shadow: 1px 0 1px #01b301;
+    background-color: #01830171;
+    line-height: 65px;
+    margin-top: 26px;
+}

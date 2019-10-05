@@ -18,3 +18,23 @@ div.nextShoppingStep div.stepDetail {
     background-color: #e9e6e6;
     color: white;
 }
+
+div.nextShoppingStep div.stepDetail div.extitTheCart {
+    top: -15px;
+    right: -15px;
+    position: absolute;
+    border: 2px solid #080808;
+    box-shadow: 1px 0 1px #01b301;
+    background-color: #ffffff;
+    color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+}
+
+div.nextShoppingStep div.stepDetail div.extitTheCart span {
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}

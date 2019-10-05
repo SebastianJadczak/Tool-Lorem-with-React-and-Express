@@ -114,3 +114,19 @@ app.post('/deleteProductWithCart/:name', (req, res) => {
 
 
 //End SitAmet Page
+
+//Start Aliquip Page 
+
+app.get('/getDataProfile', (req, res) => {
+
+
+    const profile = JSON.parse(fs.readFileSync('./database/profile.json'))
+
+    res.json({
+        data: profile
+
+    })
+})
+
+
+//End Alisuip Page
