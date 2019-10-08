@@ -69,3 +69,8 @@ div.element p.elementTitle {
 div.element p.content {
     margin-bottom: 5px;
 }
+
+div.inProgressDiv {
+    height: 100%;
+    width: 100%;
+}

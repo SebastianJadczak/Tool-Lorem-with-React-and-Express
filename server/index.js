@@ -130,3 +130,34 @@ app.get('/getDataProfile', (req, res) => {
 
 
 //End Alisuip Page
+
+
+// Start Dolor Page
+
+
+
+app.post(`/Dolor/:idElement/:contentElement/:statusElement`, (req, res) => {
+    const {
+        idElement,
+        contentElement,
+        statusElement
+    } = req.params
+
+
+    const data = JSON.parse(fs.readFileSync('./src/database/database.json'))
+
+    data.push({
+        id: Number(idElement - 1),
+        content: contentElement,
+        status: "InProgress"
+    })
+    data.splice(idElement - 1, 1)
+    const dataJSON = JSON.stringify(data)
+
+
+
+    fs.writeFileSync('./src/database/database.json', dataJSON)
+
+})
+
+//End Dolor Page
